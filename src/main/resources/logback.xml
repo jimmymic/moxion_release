@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration packagingData="false">
+
+    <!-- Timestamp used into the Log Stream Name -->
+    <timestamp key="date" datePattern="yyyyMMdd"/>
+
+
+
+    <!--      A console output -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyyMMdd'T'HHmmss} %thread %level{1} %logger{10} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root with a threshold to INFO and above -->
+    <root level="INFO">
+        <!-- Append to the console -->
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
